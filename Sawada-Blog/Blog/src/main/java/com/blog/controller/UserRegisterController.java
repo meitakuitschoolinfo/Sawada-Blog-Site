@@ -10,16 +10,17 @@ import com.blog.service.UserService;
 
 @Controller
 public class UserRegisterController {
-@Autowired
-private UserService userService;
-	@GetMapping("/uer/register")
+	@Autowired
+	private UserService userService;
+	
+	@GetMapping("/user/register")
 	public String getUserRegisterPage() {
 		return "register.html";
 	}
 	
 	@PostMapping("/user/register/process")
 	public String register(@RequestParam String userName, @RequestParam String email, @RequestParam String password) {
-		if(UserService.createAccount(userName, email, password)) {
+		if(userService.createAccount(userName, email, password)) {
 			return "redirect:/user/login";
 		}else {
 			return "redirect:/user/login";
