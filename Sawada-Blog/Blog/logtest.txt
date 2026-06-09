@@ -1,0 +1,2 @@
+2026-06-09T17:19:14.832+09:00  WARN 83068 --- [Blog] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s289ms), soft-evicting connections from pool.
+2026-06-09T21:07:47.891+09:00  WARN 83068 --- [Blog] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s61ms), soft-evicting connections from pool.
