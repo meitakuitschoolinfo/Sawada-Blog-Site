@@ -30,7 +30,7 @@ public class UserLoginController {
 		if(userService.loginAccount(email, password) == null) {
 			return "redirect:/user/login";
 		} else {
-			session.setAttribute("LoginInfo", userService.loginAccount(email, password));    // loginAccountの情報をLoginInfo
+			session.setAttribute("LoginInfo", userService.loginAccount(email, password));    // loginAccountの情報を
 			return "redirect:/user/blog/list";
 		}
 	}
