@@ -23,9 +23,9 @@ public class BlogService {
 		}
 	}
 	
-	public boolean createBlogPost(String blogTitle, LocalDate registerDate, String fileName, String blogDetail, String Category, Long userId) {
+	public boolean createBlogPost(String blogTitle, LocalDate registerDate, String fileName, String blogDetail, String category, Long userId) {
 		if(blogDao.findByBlogTitleAndRegisterDate(blogTitle, registerDate) == null) {
-			blogDao.save(new BlogEntity(blogTitle, registerDate, fileName, blogDetail, Category, userId));
+			blogDao.save(new BlogEntity(blogTitle, registerDate, fileName, blogDetail, category, userId));
 			return true;
 		} else {
 			return false;
