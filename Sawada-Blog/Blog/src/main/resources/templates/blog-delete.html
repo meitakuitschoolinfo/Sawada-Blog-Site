@@ -12,9 +12,9 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/css/reset.css">
-	<link rel="stylesheet" href="/css/header.css">
-	<link rel="stylesheet" href="/css/blog.css">
+	<link rel="stylesheet" th:href="@{/css/reset.css}">
+	<link rel="stylesheet" th:href="@{/css/header.css}">
+	<link rel="stylesheet" th:href="@{/css/blog.css}">
 </head>
 
 
@@ -31,10 +31,10 @@
 						menu
 					</button>
 					<ul class="nav__wrapper">
-                        <li class="nav__item"><a href="/user/blog/list">Home</a></li>
-                        <li class="nav__item"><a href="/user/blog/register">Blog Register</a></li>
-                          <li class="nav__item"><a href="/user/blog/delete/list">Delete List</a></li>
-                        <li class="nav__item"><a href="/user/blog/logout">Logout</a></li>
+                        <li class="nav__item"><a th:href="@{/user/blog/list}">Home</a></li>
+                        <li class="nav__item"><a th:href="@{/user/blog/register}">Blog Register</a></li>
+                          <li class="nav__item"><a th:href="@{/user/blog/delete/list}">Delete List</a></li>
+                        <li class="nav__item"><a th:href="@{/user/blog/logout}">Logout</a></li>
                     </ul>
 				</nav>
 			</div>
@@ -46,7 +46,7 @@
             <h2>削除候補一覧</h2>
             <div class="blog-list-flex">
 				<article class="blog-topic-article">
-					<a href="/user/blog/delete/detail/{blogId}" class="blog-colum">
+					<a th:href="@{/user/blog/delete/detail/{blogId}}" class="blog-colum">
 						<div class="blog-colum-category">
 							<p></p>
 						</div>

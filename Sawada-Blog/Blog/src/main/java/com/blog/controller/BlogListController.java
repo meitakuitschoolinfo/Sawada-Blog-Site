@@ -22,16 +22,17 @@ public class BlogListController {
 	
 	@GetMapping("/user/blog/list")
 	public String getBlogListPage(Model model) {
-		UserEntity userEntity = (UserEntity) session.getAttribute("UserInfo");
+		UserEntity userEntity = (UserEntity) session.getAttribute("LoginInfo");
 		
 		Long userId = userEntity.getUserId();
 		String userName = userEntity.getUserName();
-		
+		System.out.println(userName);
 		List<BlogEntity> blogList = blogService.findAllBlogPost(userId);
 		
 		model.addAttribute("userName", userName);
 		model.addAttribute("blogList", blogList);
 		
+		//System.out.println(userName); 動作確認用
 		return "blog-list.html";
 		
 	}

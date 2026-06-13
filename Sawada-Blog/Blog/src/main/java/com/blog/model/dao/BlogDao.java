@@ -12,7 +12,7 @@ import com.blog.model.entity.BlogEntity;
 public interface BlogDao extends JpaRepository<BlogEntity, Long> {
 	List<BlogEntity> findByUserId(Long userId);
 
-	BlogEntity seve(BlogEntity blogEntity);
+	BlogEntity save(BlogEntity blogEntity);
 
 	BlogEntity findByBlogTitleAndRegisterDate(String blogTitle, LocalDate registerDate);
 
