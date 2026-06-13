@@ -13,9 +13,9 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/css/reset.css">
-	<link rel="stylesheet" href="/css/header.css">
-	<link rel="stylesheet" href="/css/blog.css">
+	<link rel="stylesheet" th:href="@{/css/reset.css}">
+	<link rel="stylesheet" th:href="@{/css/header.css}">
+	<link rel="stylesheet" th:href="@{/css/blog.css}">
 </head>
 
 <body>
@@ -31,10 +31,10 @@
 						menu
 					</button>
 					<ul class="nav__wrapper">
-                        <li class="nav__item"><a href="/user/blog/list">Home</a></li>
-                        <li class="nav__item"><a href="/user/blog/register">Blog Register</a></li>
-                          <li class="nav__item"><a href="/user/blog/delete/list">Delete List</a></li>
-                        <li class="nav__item"><a href="/user/blog/logout">Logout</a></li>
+                        <li class="nav__item"><a th:href="@{/user/blog/list}">Home</a></li>
+                        <li class="nav__item"><a th:href="@{/user/blog/register}">Blog Register</a></li>
+                          <li class="nav__item"><a th:href="@{/user/blog/delete/list}">Delete List</a></li>
+                        <li class="nav__item"><a th:href="@{/user/blog/logout}">Logout</a></li>
                     </ul>
 				</nav>
 			</div>
@@ -64,7 +64,7 @@
 					<div>詳細</div>
 					<textarea name="blogDetail" id="" cols="30" rows="10"></textarea>
 				</div>
-				<form action="/user/blog/delete" method="post">
+				<form th:action="@{/user/blog/delete}" method="post">
 					<div class="register-button">
 						 <input type="hidden" name="blogId" tvalue=>
 						<button class="change">削除</button>
